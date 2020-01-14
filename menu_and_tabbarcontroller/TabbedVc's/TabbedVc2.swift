@@ -17,6 +17,8 @@ class TabbedVc2: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        
         view.backgroundColor = .systemPink
         navigationController?.navigationBar.prefersLargeTitles = true
                navigationController?.navigationBar.largeTitleTextAttributes = [.foregroundColor: UIColor.white]

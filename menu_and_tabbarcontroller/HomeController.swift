@@ -145,7 +145,16 @@ class HomeController: UITabBarController, UITabBarControllerDelegate{
         
     }
     
+   
+   @objc func handleProfileTap (){
     
+    let vc = TabbedVc5()
+    let nc = UINavigationController(rootViewController: vc)
+    vc.title = "Profile"
+    
+               present(nc, animated: true, completion: nil)
+               
+           }
     
     lazy var setUpTabs = {
         
@@ -156,14 +165,23 @@ class HomeController: UITabBarController, UITabBarControllerDelegate{
         self.Vc5 = TabbedVc5()
         
         
-        self.Vc1?.navigationItem.title = "Activity"
+        self.Vc1?.navigationItem.title = "Home"
         self.Vc2?.navigationItem.title = "Calendar"
         self.Vc3?.navigationItem.title = "View Controller 3"
         self.Vc4?.navigationItem.title = "Numbers"
         self.Vc5?.navigationItem.title = "More"
         
-        self.Vc1?.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .compose, target: self, action: #selector(self.handleMenuTap))
+        self.Vc1?.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .play, target: self, action: #selector(self.handleProfileTap))
+       
         
+        
+        self.Vc2?.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .play, target: self, action: #selector(self.handleProfileTap))
+        
+        
+        self.Vc4?.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .play, target: self, action: #selector(self.handleProfileTap))
+        
+        
+       
         
         
         let vc1 = UINavigationController(rootViewController: self.Vc1!)
