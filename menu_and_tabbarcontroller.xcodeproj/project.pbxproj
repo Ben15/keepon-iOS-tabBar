@@ -17,11 +17,22 @@
 		D89C0DC923BDEACE00CF32F9 /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89C0DC823BDEACE00CF32F9 /* extensions.swift */; };
 		D89C0DCB23BDF48800CF32F9 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89C0DCA23BDF48800CF32F9 /* Theme.swift */; };
 		D89C0DCD23BE24AD00CF32F9 /* ChargeNowControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89C0DCC23BE24AD00CF32F9 /* ChargeNowControllerViewController.swift */; };
+		D8B2A20323CDEB3F00595BB2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B2A20223CDEB3F00595BB2 /* HomeViewController.swift */; };
+		D8B2A20A23CDEBD800595BB2 /* homeCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B2A20823CDEBD800595BB2 /* homeCellModel.swift */; };
+		D8B2A20B23CDEBD800595BB2 /* BankTransferModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B2A20923CDEBD800595BB2 /* BankTransferModel.swift */; };
+		D8B2A21723CDEBE400595BB2 /* NextAppointmentEmptyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B2A20F23CDEBE400595BB2 /* NextAppointmentEmptyCell.swift */; };
+		D8B2A21823CDEBE400595BB2 /* TodaysPaymentsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B2A21023CDEBE400595BB2 /* TodaysPaymentsCell.swift */; };
+		D8B2A21923CDEBE400595BB2 /* SubscriptionsAndPacksCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B2A21123CDEBE400595BB2 /* SubscriptionsAndPacksCell.swift */; };
+		D8B2A21A23CDEBE400595BB2 /* DateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B2A21223CDEBE400595BB2 /* DateCell.swift */; };
+		D8B2A21B23CDEBE400595BB2 /* TrialCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B2A21323CDEBE400595BB2 /* TrialCell.swift */; };
+		D8B2A21C23CDEBE400595BB2 /* BankTransferEmptyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B2A21423CDEBE400595BB2 /* BankTransferEmptyCell.swift */; };
+		D8B2A21D23CDEBE400595BB2 /* BankTransferSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B2A21523CDEBE400595BB2 /* BankTransferSectionCell.swift */; };
+		D8B2A21E23CDEBE400595BB2 /* TodaysOnlineBookingAvailabilityEmptyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B2A21623CDEBE400595BB2 /* TodaysOnlineBookingAvailabilityEmptyCell.swift */; };
 		D8DD0FED23BA1D450078684A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DD0FEC23BA1D450078684A /* AppDelegate.swift */; };
 		D8DD0FEF23BA1D450078684A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DD0FEE23BA1D450078684A /* SceneDelegate.swift */; };
 		D8DD0FF123BA1D450078684A /* ContainerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DD0FF023BA1D450078684A /* ContainerController.swift */; };
 		D8DD0FF623BA1D4D0078684A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8DD0FF523BA1D4D0078684A /* Assets.xcassets */; };
-		D8DD100123BA1F290078684A /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DD100023BA1F290078684A /* HomeController.swift */; };
+		D8DD100123BA1F290078684A /* baseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DD100023BA1F290078684A /* baseController.swift */; };
 		D8DD100323BA22880078684A /* TabbedVc1.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DD100223BA22880078684A /* TabbedVc1.swift */; };
 		D8DD100523BA229D0078684A /* TabbedVc2.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DD100423BA229D0078684A /* TabbedVc2.swift */; };
 		D8DD100823BA22BC0078684A /* TabbedVc3.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DD100723BA22BC0078684A /* TabbedVc3.swift */; };
@@ -43,13 +54,24 @@
 		D89C0DC823BDEACE00CF32F9 /* extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
 		D89C0DCA23BDF48800CF32F9 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		D89C0DCC23BE24AD00CF32F9 /* ChargeNowControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargeNowControllerViewController.swift; sourceTree = "<group>"; };
+		D8B2A20223CDEB3F00595BB2 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		D8B2A20823CDEBD800595BB2 /* homeCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = homeCellModel.swift; sourceTree = "<group>"; };
+		D8B2A20923CDEBD800595BB2 /* BankTransferModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BankTransferModel.swift; sourceTree = "<group>"; };
+		D8B2A20F23CDEBE400595BB2 /* NextAppointmentEmptyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NextAppointmentEmptyCell.swift; sourceTree = "<group>"; };
+		D8B2A21023CDEBE400595BB2 /* TodaysPaymentsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodaysPaymentsCell.swift; sourceTree = "<group>"; };
+		D8B2A21123CDEBE400595BB2 /* SubscriptionsAndPacksCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubscriptionsAndPacksCell.swift; sourceTree = "<group>"; };
+		D8B2A21223CDEBE400595BB2 /* DateCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateCell.swift; sourceTree = "<group>"; };
+		D8B2A21323CDEBE400595BB2 /* TrialCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrialCell.swift; sourceTree = "<group>"; };
+		D8B2A21423CDEBE400595BB2 /* BankTransferEmptyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BankTransferEmptyCell.swift; sourceTree = "<group>"; };
+		D8B2A21523CDEBE400595BB2 /* BankTransferSectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BankTransferSectionCell.swift; sourceTree = "<group>"; };
+		D8B2A21623CDEBE400595BB2 /* TodaysOnlineBookingAvailabilityEmptyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodaysOnlineBookingAvailabilityEmptyCell.swift; sourceTree = "<group>"; };
 		D8DD0FE923BA1D450078684A /* menu_and_tabbarcontroller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = menu_and_tabbarcontroller.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8DD0FEC23BA1D450078684A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8DD0FEE23BA1D450078684A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D8DD0FF023BA1D450078684A /* ContainerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerController.swift; sourceTree = "<group>"; };
 		D8DD0FF523BA1D4D0078684A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D8DD0FFA23BA1D4D0078684A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D8DD100023BA1F290078684A /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		D8DD100023BA1F290078684A /* baseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = baseController.swift; sourceTree = "<group>"; };
 		D8DD100223BA22880078684A /* TabbedVc1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbedVc1.swift; sourceTree = "<group>"; };
 		D8DD100423BA229D0078684A /* TabbedVc2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbedVc2.swift; sourceTree = "<group>"; };
 		D8DD100723BA22BC0078684A /* TabbedVc3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbedVc3.swift; sourceTree = "<group>"; };
@@ -107,6 +129,48 @@
 			path = models;
 			sourceTree = "<group>";
 		};
+		D8B2A1FF23CDEAEF00595BB2 /* HomeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D8B2A20E23CDEBE400595BB2 /* cells */,
+				D8B2A20723CDEBD800595BB2 /* models */,
+				D8B2A20423CDEBD200595BB2 /* protocols */,
+				D8B2A20223CDEB3F00595BB2 /* HomeViewController.swift */,
+			);
+			path = HomeViewController;
+			sourceTree = "<group>";
+		};
+		D8B2A20423CDEBD200595BB2 /* protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = protocols;
+			sourceTree = "<group>";
+		};
+		D8B2A20723CDEBD800595BB2 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				D8B2A20823CDEBD800595BB2 /* homeCellModel.swift */,
+				D8B2A20923CDEBD800595BB2 /* BankTransferModel.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		D8B2A20E23CDEBE400595BB2 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				D8B2A20F23CDEBE400595BB2 /* NextAppointmentEmptyCell.swift */,
+				D8B2A21023CDEBE400595BB2 /* TodaysPaymentsCell.swift */,
+				D8B2A21123CDEBE400595BB2 /* SubscriptionsAndPacksCell.swift */,
+				D8B2A21223CDEBE400595BB2 /* DateCell.swift */,
+				D8B2A21323CDEBE400595BB2 /* TrialCell.swift */,
+				D8B2A21423CDEBE400595BB2 /* BankTransferEmptyCell.swift */,
+				D8B2A21523CDEBE400595BB2 /* BankTransferSectionCell.swift */,
+				D8B2A21623CDEBE400595BB2 /* TodaysOnlineBookingAvailabilityEmptyCell.swift */,
+			);
+			path = cells;
+			sourceTree = "<group>";
+		};
 		D8DD0FE023BA1D450078684A = {
 			isa = PBXGroup;
 			children = (
@@ -135,8 +199,9 @@
 				D8DD101123BA2ECE0078684A /* Main.storyboard */,
 				D8DD100623BA22A20078684A /* TabbedVc's */,
 				D8DD0FF523BA1D4D0078684A /* Assets.xcassets */,
-				D8DD100023BA1F290078684A /* HomeController.swift */,
+				D8DD100023BA1F290078684A /* baseController.swift */,
 				D89C0DC823BDEACE00CF32F9 /* extensions.swift */,
+				D8B2A1FF23CDEAEF00595BB2 /* HomeViewController */,
 				D885842923C0E147009266DE /* chargeNowController */,
 				D89C0DCA23BDF48800CF32F9 /* Theme.swift */,
 				D8DD100F23BA29C20078684A /* MenuController.swift */,
@@ -150,10 +215,10 @@
 			isa = PBXGroup;
 			children = (
 				D8DD100223BA22880078684A /* TabbedVc1.swift */,
+				D8DD100423BA229D0078684A /* TabbedVc2.swift */,
 				D8DD100723BA22BC0078684A /* TabbedVc3.swift */,
 				D8DD100923BA22D00078684A /* TabbedVc4.swift */,
 				D8DD100B23BA22E00078684A /* TabbedVc5.swift */,
-				D8DD100423BA229D0078684A /* TabbedVc2.swift */,
 			);
 			path = "TabbedVc's";
 			sourceTree = "<group>";
@@ -228,15 +293,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8B2A21823CDEBE400595BB2 /* TodaysPaymentsCell.swift in Sources */,
+				D8B2A21E23CDEBE400595BB2 /* TodaysOnlineBookingAvailabilityEmptyCell.swift in Sources */,
+				D8B2A21A23CDEBE400595BB2 /* DateCell.swift in Sources */,
 				D89C0DC323BB116200CF32F9 /* actionBarCellCollectionViewCell.swift in Sources */,
 				D89C0DCD23BE24AD00CF32F9 /* ChargeNowControllerViewController.swift in Sources */,
+				D8B2A20A23CDEBD800595BB2 /* homeCellModel.swift in Sources */,
+				D8B2A21C23CDEBE400595BB2 /* BankTransferEmptyCell.swift in Sources */,
 				D89C0DC723BB130600CF32F9 /* actionDrawerItem.swift in Sources */,
+				D8B2A21923CDEBE400595BB2 /* SubscriptionsAndPacksCell.swift in Sources */,
+				D8B2A20B23CDEBD800595BB2 /* BankTransferModel.swift in Sources */,
 				D8DD0FF123BA1D450078684A /* ContainerController.swift in Sources */,
+				D8B2A21723CDEBE400595BB2 /* NextAppointmentEmptyCell.swift in Sources */,
 				D8DD100A23BA22D00078684A /* TabbedVc4.swift in Sources */,
+				D8B2A21D23CDEBE400595BB2 /* BankTransferSectionCell.swift in Sources */,
 				D8DD100823BA22BC0078684A /* TabbedVc3.swift in Sources */,
 				D89C0DC923BDEACE00CF32F9 /* extensions.swift in Sources */,
+				D8B2A20323CDEB3F00595BB2 /* HomeViewController.swift in Sources */,
 				D8DD100E23BA288B0078684A /* protocols.swift in Sources */,
 				D8DD100523BA229D0078684A /* TabbedVc2.swift in Sources */,
+				D8B2A21B23CDEBE400595BB2 /* TrialCell.swift in Sources */,
 				D8DD101023BA29C20078684A /* MenuController.swift in Sources */,
 				D885842B23C0E162009266DE /* chargeNowController.swift in Sources */,
 				D885842F23C0E1C4009266DE /* markAsCardPaymentsButton.swift in Sources */,
@@ -246,7 +322,7 @@
 				D885842D23C0E19B009266DE /* cellModel.swift in Sources */,
 				D8DD0FED23BA1D450078684A /* AppDelegate.swift in Sources */,
 				D8DD100C23BA22E00078684A /* TabbedVc5.swift in Sources */,
-				D8DD100123BA1F290078684A /* HomeController.swift in Sources */,
+				D8DD100123BA1F290078684A /* baseController.swift in Sources */,
 				D89C0DC023BB0A2D00CF32F9 /* ActionDrawerController.swift in Sources */,
 				D8DD0FEF23BA1D450078684A /* SceneDelegate.swift in Sources */,
 			);

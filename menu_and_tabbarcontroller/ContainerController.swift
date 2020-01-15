@@ -32,7 +32,7 @@ class ContainerController: UIViewController {
     
     func setUpHomeController (){
         
-        let homeController = HomeController()
+        let homeController = baseController()
         
         homeController.customDelegate = self
         

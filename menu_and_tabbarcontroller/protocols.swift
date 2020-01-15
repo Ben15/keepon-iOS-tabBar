@@ -11,3 +11,9 @@ import Foundation
 protocol HomeControllerDelegate {
     func handleMenuOpen()
 }
+
+
+//HomeViewController
+protocol cellButtonDelegate {
+    func presentVc(navTitle:String)
+}

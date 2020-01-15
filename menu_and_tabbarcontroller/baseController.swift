@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeController: UITabBarController, UITabBarControllerDelegate{
+class baseController: UITabBarController, UITabBarControllerDelegate{
     
     //    MARK: properties
     var Vc1 : UIViewController?
@@ -147,45 +147,53 @@ class HomeController: UITabBarController, UITabBarControllerDelegate{
     
    
    @objc func handleProfileTap (){
-    
     let vc = TabbedVc5()
     let nc = UINavigationController(rootViewController: vc)
     vc.title = "Profile"
-    
                present(nc, animated: true, completion: nil)
                
            }
     
     lazy var setUpTabs = {
         
-        self.Vc1 = TabbedVc1()
+        self.Vc1 = HomeViewController()
         self.Vc2 = TabbedVc2()
         self.Vc3 = TabbedVc3()
         self.Vc4 = TabbedVc4()
         self.Vc5 = TabbedVc5()
         
         
-        self.Vc1?.navigationItem.title = "Home"
+        
+        
+    
         self.Vc2?.navigationItem.title = "Calendar"
         self.Vc3?.navigationItem.title = "View Controller 3"
         self.Vc4?.navigationItem.title = "Numbers"
         self.Vc5?.navigationItem.title = "More"
         
-        self.Vc1?.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .play, target: self, action: #selector(self.handleProfileTap))
-       
         
         
-        self.Vc2?.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .play, target: self, action: #selector(self.handleProfileTap))
+        let settingsBarItem = UIBarButtonItem.init(image: UIImage(named: "settings-tab"), style: .done, target: self, action: #selector(self.handleProfileTap))
         
+        self.Vc1?.navigationItem.rightBarButtonItem = settingsBarItem
+            
+//            UIBarButtonItem(barButtonSystemItem: .play, target: self, action: #selector(self.handleProfileTap))
         
-        self.Vc4?.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .play, target: self, action: #selector(self.handleProfileTap))
+        self.Vc2?.navigationItem.leftBarButtonItem = settingsBarItem
         
+        self.Vc4?.navigationItem.leftBarButtonItem = settingsBarItem
         
        
         
         
         let vc1 = UINavigationController(rootViewController: self.Vc1!)
-        vc1.tabBarItem = UITabBarItem(title: "Notifications", image: UIImage(named: "notification-tab"), selectedImage: UIImage(named: "notification-tab"))
+        vc1.tabBarItem = UITabBarItem(title: "Notifications", image: UIImage(named: "home-tab"), selectedImage: UIImage(named: "home-tab"))
+        
+        vc1.navigationBar.isTranslucent = false
+        vc1.navigationBar.barTintColor = UIColor(hexString: "F7FBFF")
+        vc1.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        vc1.navigationBar.shadowImage = UIImage()
+//        vc1.navigationBar.layoutIfNeeded()
         
         vc1.tabBarItem.badgeValue = "12"
         vc1.title = ""
@@ -211,7 +219,7 @@ class HomeController: UITabBarController, UITabBarControllerDelegate{
         
         
         let vc5 = UINavigationController(rootViewController: self.Vc5!)
-        vc5.tabBarItem = UITabBarItem(title: "More", image: UIImage(named: "more-tab"), selectedImage: UIImage(named: "more-tab"))
+        vc5.tabBarItem = UITabBarItem(title: "More", image: UIImage(named: "client-tab"), selectedImage: UIImage(named: "client-tab"))
         vc5.tabBarItem.tag = 4
         //    vc5.tabBarItem.titlePositionAdjustment = UIOffset(horizontal: 0, vertical: -5.0)
         vc5.title = ""
