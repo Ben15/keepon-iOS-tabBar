@@ -60,7 +60,7 @@ class SubscriptionsAndPacksCell: UITableViewCell {
     
     lazy var setUpSectionLabel = {
         
-        self.sectionLabel.font = UIFont.systemFont(ofSize: 14, weight: .semibold)
+        self.sectionLabel.font = homeSectionTitle
         self.sectionLabel.text = "Subscriptions and packs"
         self.sectionLabel.translatesAutoresizingMaskIntoConstraints = false
         self.container.addSubview(self.sectionLabel)

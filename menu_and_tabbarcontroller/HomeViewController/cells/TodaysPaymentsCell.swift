@@ -60,7 +60,7 @@ class TodaysPaymentsCell: UITableViewCell {
     
     lazy var setUpSectionLabel = {
         
-        self.sectionLabel.font = UIFont.systemFont(ofSize: 14, weight: .semibold)
+        self.sectionLabel.font = homeSectionTitle
         self.sectionLabel.text = "Todays Payments"
         self.sectionLabel.translatesAutoresizingMaskIntoConstraints = false
         self.container.addSubview(self.sectionLabel)
@@ -121,12 +121,12 @@ class TodaysPaymentsCell: UITableViewCell {
         let heading = UILabel()
         heading.text = title
         heading.alpha = 0.7
-        heading.font = UIFont.systemFont(ofSize: 12, weight: .medium)
+        heading.font = homeSectionPaymentTitle
         heading.translatesAutoresizingMaskIntoConstraints = false
         
         let number = UILabel()
         number.text = (amount != nil) ? "$\(String(amount!))" : String(amountInt!)
-        number.font = UIFont.systemFont(ofSize: 20, weight: .semibold)
+        number.font = homeSectionNumber
         number.translatesAutoresizingMaskIntoConstraints = false
 
         let containerView = UIView()

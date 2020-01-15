@@ -7,24 +7,44 @@
 //
 
 import UIKit
+import SafariServices
 
 class HomeViewController: UIViewController {
 
+    //    MARK: properties
     
     let tableView = UITableView()
-    var cells = ["1","2","3","4","5","6","7"]
     var cellsTwo = [
         
         homeCellModel(cell: DateCell(), cellIdentifier: "dateCell", type: .dateCell, cellClass: DateCell.self),
-        homeCellModel(cell: TrialCell(), cellIdentifier: "trialCell", type: .trialCell, cellClass: TrialCell.self),
+         homeCellModel(cell: TrialCell(), cellIdentifier: "trialCell", type: .trialCell, cellClass: TrialCell.self),
+           homeCellModel(cell: AnnouncementCell(), cellIdentifier: "announcementCell", type: .announcement, cellClass: AnnouncementCell.self),
+       
         homeCellModel(cell: TodaysPaymentsCell(), cellIdentifier: "todaysPayments", type:.todaysPayments, cellClass: TodaysPaymentsCell.self),
-//        cellModel(cell: BankTransferSectionCell(), cellIdentifier: "bankTransfer", type: .bankTransfer, cellClass: BankTransferSectionCell.self),
+//        homecellModel(cell: BankTransferSectionCell(), cellIdentifier: "bankTransfer", type: .bankTransfer, cellClass: BankTransferSectionCell.self),
         homeCellModel(cell: BankTransferEmptyCell(), cellIdentifier: "bankTransferEmpty", type: .bankTransferEmpty, cellClass: BankTransferEmptyCell.self),
         homeCellModel(cell: NextAppointmentEmptyCell(), cellIdentifier: "nextAppointment", type: .nextAppointmentEmpty, cellClass: NextAppointmentEmptyCell.self),
-        homeCellModel(cell: TodaysOnlineBookingAvailabilityEmptyCell(), cellIdentifier: "onlineBookingEmpty", type: .onlineBookingsEmpty, cellClass: TodaysOnlineBookingAvailabilityEmptyCell.self),
         homeCellModel(cell: SubscriptionsAndPacksCell(), cellIdentifier: "subscriptionsAndPacks", type: .subscriptionsAndPacks, cellClass: SubscriptionsAndPacksCell.self),
-            
+        
+        homeCellModel(cell: TodaysOnlineBookingAvailabilityEmptyCell(), cellIdentifier: "onlineBookingEmpty", type: .onlineBookingsEmpty, cellClass: TodaysOnlineBookingAvailabilityEmptyCell.self),
+        
     ]
+        
+    
+    //    MARK: inits
+    
+        override func viewDidLoad() {
+            super.viewDidLoad()
+         
+            tableViewSetup()
+            
+        }
+
+    
+    //    MARK: methods
+    
+
+    
     
     lazy var tableViewSetup = {
         
@@ -38,7 +58,7 @@ class HomeViewController: UIViewController {
         self.tableView.backgroundColor = UIColor(hexString: "#F7FBFF")
         self.tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
         let footer = UIView()
-        footer.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: 120)
+        footer.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: 220)
         self.tableView.tableFooterView = footer
         self.view.addSubview(self.tableView)
         
@@ -47,26 +67,12 @@ class HomeViewController: UIViewController {
     lazy var registerCells = {
         
         for cell in self.cellsTwo {
-            
             self.tableView.register(cell.cellClass, forCellReuseIdentifier: cell.cellIdentifier)
-            
         }
                         
     }
                 
-        
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()        
-     
-        tableViewSetup()
-        
-    }
 }
-
-
-
-
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -116,7 +122,11 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
         case .onlineBookings:
             return defaultCell
         case .onlineBookingsEmpty:
-            return tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! TodaysOnlineBookingAvailabilityEmptyCell
+            cell.exampleDelegate = self
+            
+            return cell
         case .subscriptionsAndPacks:
             
             let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! SubscriptionsAndPacksCell
@@ -130,6 +140,13 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
             return tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
         case .trialCell:
             return tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
+        case .announcement:
+            
+            var cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! AnnouncementCell
+                
+            cell.announcementDelegate = self
+            
+            return cell
         default:
             return defaultCell
             
@@ -154,3 +171,44 @@ extension HomeViewController: cellButtonDelegate {
     
     
 }
+
+extension HomeViewController: onlineBookingExampleDelegate {
+    func presentSafari() {
+        print("Example online booking")
+        
+        let url = URL(string: "https://app.getkeepon.com/book/keepon")
+        
+        let safariVC = SFSafariViewController(url: url!)
+        present(safariVC, animated: true, completion: nil)
+        
+    }
+    
+    
+  
+    
+    
+}
+
+
+extension HomeViewController: openAnnouncementDelegate {
+    func openAnnouncement(heading: String, body: String, image: Any) {
+        
+             let vc = UIViewController()
+        
+             let nc = UINavigationController(rootViewController: vc)
+            vc.title = heading
+            vc.view.backgroundColor = .white
+        vc.navigationController?.navigationBar.isHidden = true
+            
+            let imageView = UIImageView()
+            imageView.contentMode = .scaleAspectFill
+            imageView.image = image as! UIImage
+            imageView.frame = CGRect(x: 0, y: 0, width: vc.view.frame.width, height: 260)
+            vc.view.addSubview(imageView)
+        
+        
+             present(nc, animated: true, completion: nil)
+    }
+    
+      
+  }

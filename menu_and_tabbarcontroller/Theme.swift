@@ -10,5 +10,14 @@ import Foundation
 import UIKit
 
 
-let backgroundColor = UIColor(red: 247/255, green: 251/255, blue: 255/255, alpha: 1)
+let backgroundViewColor = UIColor(red: 247/255, green: 251/255, blue: 255/255, alpha: 1)
 
+
+//homeSectionFont
+let homeSectionTitle = UIFont.systemFont(ofSize: 14, weight: .semibold)
+let homeSectionPaymentTitle = UIFont.systemFont(ofSize: 12, weight: .medium)
+let homeSectionNumber = UIFont.systemFont(ofSize: 24, weight: .semibold)
+let homeSectionSubCell = UIFont.systemFont(ofSize: 14, weight: .bold)
+
+let homeSectionEmptyStateHeading = UIFont.systemFont(ofSize: 18, weight: .bold)
+let homeSectionEmptyStateBody = UIFont.systemFont(ofSize: 14, weight: .regular)

@@ -73,7 +73,7 @@ class BankTransferSectionCell: UITableViewCell {
             
             lazy var setUpSectionLabel = {
                 
-                self.sectionLabel.font = UIFont.systemFont(ofSize: 14, weight: .semibold)
+                self.sectionLabel.font = homeSectionTitle
                 self.sectionLabel.text = "Funds to transfer to your bank"
                 self.sectionLabel.translatesAutoresizingMaskIntoConstraints = false
                 self.container.addSubview(self.sectionLabel)

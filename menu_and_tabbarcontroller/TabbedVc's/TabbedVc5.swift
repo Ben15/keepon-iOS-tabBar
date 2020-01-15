@@ -15,7 +15,7 @@ class TabbedVc5: UIViewController {
     //    MARK: methods
     
     var identifier = "cellId"
-    var buttonLabels = [["Numbers", "Online Bookings", "SMS notifications", "Calendar integrations"], ["Bank details"], ["My Account"]]
+    var buttonLabels = [["Online Bookings", "SMS settings", "Calendar integration","Products & Services", "Invoices"], ["Bank details"], ["My Account"]]
     var sections = ["", "Get paid", "Account"]
     
     
@@ -25,7 +25,6 @@ class TabbedVc5: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = .systemYellow
         navigationController?.navigationBar.prefersLargeTitles = true
 //               navigationController?.navigationBar.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
                view.backgroundColor = UIColor(red: 247/255, green: 251/255, blue: 255/255, alpha: 1)
@@ -146,7 +145,7 @@ class TabbedVc5: UIViewController {
             
             let backgroundView = UIView()
             
-            backgroundView.backgroundColor = .systemYellow
+//            backgroundView.backgroundColor = .systemYellow
             
             
             cell.accessoryType = UITableViewCell.AccessoryType.disclosureIndicator

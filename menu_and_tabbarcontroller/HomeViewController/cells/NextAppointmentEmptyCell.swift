@@ -50,7 +50,7 @@ class NextAppointmentEmptyCell: UITableViewCell {
                     self.container.leftAnchor.constraint(equalTo: self.background.leftAnchor, constant: 8),
                     self.container.rightAnchor.constraint(equalTo: self.background.rightAnchor, constant: -8),
                     self.container.topAnchor.constraint(equalTo: self.background.topAnchor, constant: 4),
-                    self.container.heightAnchor.constraint(equalToConstant: 198),
+                    self.container.heightAnchor.constraint(equalToConstant: 218),
                     self.container.bottomAnchor.constraint(equalTo: self.background.bottomAnchor, constant: -4),
                 ])
             }
@@ -59,7 +59,7 @@ class NextAppointmentEmptyCell: UITableViewCell {
             
             lazy var setUpSectionLabel = {
                 
-                self.sectionLabel.font = UIFont.systemFont(ofSize: 14, weight: .semibold)
+                self.sectionLabel.font = homeSectionTitle
                 self.sectionLabel.text = "Next Appointment"
                 self.sectionLabel.translatesAutoresizingMaskIntoConstraints = false
                 self.container.addSubview(self.sectionLabel)
@@ -89,16 +89,17 @@ class NextAppointmentEmptyCell: UITableViewCell {
         title.frame = CGRect(x: 0, y: 0, width: 300, height: 20)
         title.translatesAutoresizingMaskIntoConstraints = false
         title.textAlignment = .center
-        title.font = UIFont.systemFont(ofSize: 16, weight: .bold)
+        title.font = homeSectionEmptyStateHeading
         title.text = "Your day’s completley free"
         
         let bodyText = UILabel()
         bodyText.frame = CGRect(x: 0, y: 0, width: 300, height: 130)
         bodyText.numberOfLines = 0
         bodyText.textAlignment = .center
-         bodyText.font = UIFont.systemFont(ofSize: 12, weight: .regular)
+         bodyText.font = homeSectionEmptyStateBody
         bodyText.translatesAutoresizingMaskIntoConstraints = false
-        bodyText.text = "Book some appointments or take some time to yourself, whatever it is make sure you enjoy it."
+        bodyText.alpha = 0.6
+        bodyText.text = "Book some appointments or take some time to yourself, whatever it is make sure \nyou enjoy it."
         
         
         self.container.addSubview(title)
@@ -115,7 +116,7 @@ class NextAppointmentEmptyCell: UITableViewCell {
             bodyText.widthAnchor.constraint(equalToConstant: 300),
             button.widthAnchor.constraint(equalToConstant: 168),
             button.heightAnchor.constraint(equalToConstant: 30),
-            button.topAnchor.constraint(equalTo: bodyText.bottomAnchor, constant: 12),
+            button.topAnchor.constraint(equalTo: bodyText.bottomAnchor, constant: 16),
             button.centerXAnchor.constraint(equalTo: self.container.centerXAnchor)
         
         

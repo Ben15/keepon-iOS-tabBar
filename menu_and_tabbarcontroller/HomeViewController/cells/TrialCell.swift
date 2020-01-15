@@ -16,19 +16,21 @@ class TrialCell: UITableViewCell {
         
         lazy var setUpBg = {
                     
-            self.bg.backgroundColor = UIColor(hexString: "1C83F6")
+            self.bg.backgroundColor = UIColor(hexString: "E4F1FF")
             self.bg.translatesAutoresizingMaskIntoConstraints = false
             self.bg.layer.cornerRadius = 4
+            self.bg.layer.borderWidth = 1
+            self.bg.layer.borderColor = UIColor(hexString: "1C83F6")?.cgColor
             
             self.contentView.addSubview(self.bg)
             
             NSLayoutConstraint.activate([
             
                 self.bg.topAnchor.constraint(equalTo: self.contentView.topAnchor),
-                self.bg.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor, constant: -8),
+                self.bg.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor, constant: -4),
                 self.bg.leftAnchor.constraint(equalTo: self.contentView.leftAnchor, constant: 8),
                 self.bg.rightAnchor.constraint(equalTo: self.contentView.rightAnchor, constant: -8),
-                self.bg.heightAnchor.constraint(equalToConstant: 34)
+                self.bg.heightAnchor.constraint(equalToConstant: 48)
                 
             ])
                 
@@ -42,7 +44,7 @@ class TrialCell: UITableViewCell {
 
             self.trialLength.text = "You have 10 days left on your trial"
             self.trialLength.font = UIFont.systemFont(ofSize: 14, weight: .medium)
-            self.trialLength.textColor = .white
+            self.trialLength.textColor = UIColor(hexString: "1C83F6")
             self.trialLength.translatesAutoresizingMaskIntoConstraints = false
 
             self.bg.addSubview(self.trialLength)

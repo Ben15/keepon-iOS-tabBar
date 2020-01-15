@@ -25,6 +25,7 @@ struct homeCellModel {
         case subscriptionsAndPacks
         case dateCell
         case trialCell
+        case announcement
         case defaultCell
     }        
     var cell: UITableViewCell

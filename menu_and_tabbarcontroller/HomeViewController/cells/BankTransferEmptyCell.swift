@@ -52,7 +52,7 @@ class BankTransferEmptyCell: UITableViewCell {
                     self.container.leftAnchor.constraint(equalTo: self.background.leftAnchor, constant: 8),
                     self.container.rightAnchor.constraint(equalTo: self.background.rightAnchor, constant: -8),
                     self.container.topAnchor.constraint(equalTo: self.background.topAnchor, constant: 4),
-                    self.container.heightAnchor.constraint(equalToConstant: 238),
+                    self.container.heightAnchor.constraint(equalToConstant: 258),
                     self.container.bottomAnchor.constraint(equalTo: self.background.bottomAnchor, constant: -4),
                 ])
             }
@@ -61,7 +61,7 @@ class BankTransferEmptyCell: UITableViewCell {
             
             lazy var setUpSectionLabel = {
                 
-                self.sectionLabel.font = UIFont.systemFont(ofSize: 14, weight: .semibold)
+                self.sectionLabel.font = homeSectionTitle
                 self.sectionLabel.text = "Funds to transfer to your bank"
                 self.sectionLabel.translatesAutoresizingMaskIntoConstraints = false
                 self.container.addSubview(self.sectionLabel)
@@ -92,14 +92,15 @@ class BankTransferEmptyCell: UITableViewCell {
         title.frame = CGRect(x: 0, y: 0, width: 300, height: 20)
         title.translatesAutoresizingMaskIntoConstraints = false
         title.textAlignment = .center
-        title.font = UIFont.systemFont(ofSize: 16, weight: .bold)
+        title.font = homeSectionEmptyStateHeading
         title.text = "Set up payments"
         
         let bodyText = UILabel()
         bodyText.frame = CGRect(x: 0, y: 0, width: 300, height: 130)
         bodyText.numberOfLines = 0
         bodyText.textAlignment = .center
-         bodyText.font = UIFont.systemFont(ofSize: 12, weight: .regular)
+         bodyText.font = homeSectionEmptyStateBody
+        bodyText.alpha = 0.6
         bodyText.translatesAutoresizingMaskIntoConstraints = false
         bodyText.text = "Get verified with our payment provider stripe and accept credit & debit card payments."
         
@@ -118,7 +119,7 @@ class BankTransferEmptyCell: UITableViewCell {
             bodyText.widthAnchor.constraint(equalToConstant: 300),
             button.widthAnchor.constraint(equalToConstant: 82),
             button.heightAnchor.constraint(equalToConstant: 30),
-            button.topAnchor.constraint(equalTo: bodyText.bottomAnchor, constant: 12),
+            button.topAnchor.constraint(equalTo: bodyText.bottomAnchor, constant: 18),
             button.centerXAnchor.constraint(equalTo: self.container.centerXAnchor)
         
         
@@ -210,7 +211,7 @@ class BankTransferEmptyCell: UITableViewCell {
  
             self.sV.centerXAnchor.constraint(equalTo: self.container.centerXAnchor, constant: 0),
             self.sV.widthAnchor.constraint(equalToConstant: 180),
-            self.sV.bottomAnchor.constraint(equalTo: self.container.bottomAnchor, constant: -24)
+            self.sV.bottomAnchor.constraint(equalTo: self.container.bottomAnchor, constant: -34)
             
         ])
         

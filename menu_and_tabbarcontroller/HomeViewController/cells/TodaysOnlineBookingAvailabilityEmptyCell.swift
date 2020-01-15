@@ -15,6 +15,7 @@ class TodaysOnlineBookingAvailabilityEmptyCell: UITableViewCell {
                let sectionLabel = UILabel()
                let stackView = UIStackView()
                let padding: CGFloat = 16
+               var exampleDelegate : onlineBookingExampleDelegate?
                
                
                lazy var setUpBg = {
@@ -50,7 +51,7 @@ class TodaysOnlineBookingAvailabilityEmptyCell: UITableViewCell {
                        self.container.leftAnchor.constraint(equalTo: self.background.leftAnchor, constant: 8),
                        self.container.rightAnchor.constraint(equalTo: self.background.rightAnchor, constant: -8),
                        self.container.topAnchor.constraint(equalTo: self.background.topAnchor, constant: 4),
-                       self.container.heightAnchor.constraint(equalToConstant: 238),
+                       self.container.heightAnchor.constraint(equalToConstant: 268),
                        self.container.bottomAnchor.constraint(equalTo: self.background.bottomAnchor, constant: -4),
                    ])
                }
@@ -59,7 +60,7 @@ class TodaysOnlineBookingAvailabilityEmptyCell: UITableViewCell {
                
                lazy var setUpSectionLabel = {
                    
-                   self.sectionLabel.font = UIFont.systemFont(ofSize: 14, weight: .semibold)
+                   self.sectionLabel.font = homeSectionTitle
                    self.sectionLabel.text = "Today's online booking availability"
                    self.sectionLabel.translatesAutoresizingMaskIntoConstraints = false
                    self.container.addSubview(self.sectionLabel)
@@ -93,21 +94,22 @@ class TodaysOnlineBookingAvailabilityEmptyCell: UITableViewCell {
                   buttonSecondary.layer.cornerRadius = 4
                   buttonSecondary.setTitleColor(.darkGray, for: .highlighted)
                   buttonSecondary.translatesAutoresizingMaskIntoConstraints = false
+        buttonSecondary.addTarget(self, action: #selector(self.openOnlineBookingExample), for: .touchUpInside)
            
            let title = UILabel()
            title.frame = CGRect(x: 0, y: 0, width: 300, height: 20)
            title.translatesAutoresizingMaskIntoConstraints = false
            title.textAlignment = .center
-           title.font = UIFont.systemFont(ofSize: 16, weight: .bold)
+           title.font = homeSectionEmptyStateHeading
            title.text = "Set up your booking page"
            
            let bodyText = UILabel()
-           bodyText.frame = CGRect(x: 0, y: 0, width: 300, height: 130)
+           bodyText.frame = CGRect(x: 0, y: 0, width: 380, height: 130)
            bodyText.numberOfLines = 0
            bodyText.textAlignment = .center
-            bodyText.font = UIFont.systemFont(ofSize: 12, weight: .regular)
+            bodyText.font = homeSectionEmptyStateBody
            bodyText.translatesAutoresizingMaskIntoConstraints = false
-           bodyText.text = "Book some appointments or take some time to yourself, whatever it is make sure you enjoy it."
+           bodyText.text = "Book some appointments or take some time to yourself, whatever it is make sure \nyou enjoy it."
         bodyText.alpha = 0.6
            
            
@@ -126,7 +128,7 @@ class TodaysOnlineBookingAvailabilityEmptyCell: UITableViewCell {
                bodyText.widthAnchor.constraint(equalToConstant: 300),
                button.widthAnchor.constraint(equalToConstant: 198),
                button.heightAnchor.constraint(equalToConstant: 30),
-               button.topAnchor.constraint(equalTo: bodyText.bottomAnchor, constant: 12),
+               button.topAnchor.constraint(equalTo: bodyText.bottomAnchor, constant: 18),
                button.centerXAnchor.constraint(equalTo: self.container.centerXAnchor),
                buttonSecondary.widthAnchor.constraint(equalToConstant: 168),
                buttonSecondary.heightAnchor.constraint(equalToConstant: 30),
@@ -137,6 +139,16 @@ class TodaysOnlineBookingAvailabilityEmptyCell: UITableViewCell {
            
            
        }
+    
+    
+    
+    
+    @objc func openOnlineBookingExample (){
+        
+        self.exampleDelegate?.presentSafari()
+        
+    }
+    
        
        
        override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {

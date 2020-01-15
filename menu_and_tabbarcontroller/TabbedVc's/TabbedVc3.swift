@@ -19,8 +19,8 @@ class TabbedVc3: UIViewController {
         
 //         view.backgroundColor = .systemGreen
         navigationController?.navigationBar.prefersLargeTitles = true
-               navigationController?.navigationBar.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
-               view.backgroundColor = .systemOrange
+//               navigationController?.navigationBar.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+               view.backgroundColor = backgroundViewColor
 
         // Do any additional setup after loading the view.
     }

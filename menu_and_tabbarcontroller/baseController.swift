@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class baseController: UITabBarController, UITabBarControllerDelegate{
     
@@ -27,19 +28,11 @@ class baseController: UITabBarController, UITabBarControllerDelegate{
     var customDelegate : HomeControllerDelegate?
     
     //    MARK: inits
-    
-    
-    
-    
-    
+                
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        
-        
     }
-    
-    
-    
+            
     override func viewDidLoad() {
         super.viewDidLoad()
         self.delegate = self
@@ -92,10 +85,7 @@ class baseController: UITabBarController, UITabBarControllerDelegate{
         ])
         
         self.button = button
-        
-        
-        
-        
+                                
     }
     
     
@@ -122,10 +112,114 @@ class baseController: UITabBarController, UITabBarControllerDelegate{
         })
     }
     
+    lazy var setUpTabs = {
+            
+            self.Vc1 = HomeViewController()
+            self.Vc2 = TabbedVc2()
+            self.Vc3 = TabbedVc3()
+            self.Vc4 = TabbedVc4()
+            self.Vc5 = TabbedVc1()
+                                        
+            self.Vc2?.navigationItem.title = "Calendar"
+            self.Vc3?.navigationItem.title = "View Controller 3"
+            self.Vc4?.navigationItem.title = "Numbers"
+            self.Vc5?.navigationItem.title = "Clients"
+                            
+            let settingsBarItem = UIBarButtonItem.init(image: UIImage(named: "settings-tab"), style: .done, target: self, action: #selector(self.handleProfileTap))
+            
+            self.Vc1?.navigationItem.rightBarButtonItem = settingsBarItem
+                
+    //            UIBarButtonItem(barButtonSystemItem: .play, target: self, action: #selector(self.handleProfileTap))
+            
+            self.Vc2?.navigationItem.rightBarButtonItem = settingsBarItem
+            
+            self.Vc4?.navigationItem.rightBarButtonItem = settingsBarItem
+            self.Vc5?.navigationItem.rightBarButtonItem = settingsBarItem
+            
+           
+            
+            
+            let vc1 = UINavigationController(rootViewController: self.Vc1!)
+            vc1.tabBarItem = UITabBarItem(title: "Notifications", image: UIImage(named: "home-tab"), selectedImage: UIImage(named: "home-tab"))
+            
+            vc1.navigationBar.isTranslucent = false
+            vc1.navigationBar.barTintColor = UIColor(hexString: "F7FBFF")
+            vc1.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+            vc1.navigationBar.shadowImage = UIImage()
+    //        vc1.navigationBar.layoutIfNeeded()
+            
+            vc1.tabBarItem.badgeValue = "12"
+            vc1.title = ""
+            vc1.tabBarItem.tag = 0
+            
+            
+            let vc2 = UINavigationController(rootViewController: self.Vc2!)
+            vc2.tabBarItem = UITabBarItem(title: "Calendar", image: UIImage(named: "calendar-tab"), selectedImage: UIImage(named: "calendar-tab"))
+            vc2.tabBarItem.tag = 1
+            vc2.title = ""
+            
+            let vc3 = UINavigationController(rootViewController: self.Vc3!)
+            vc3.tabBarItem = UITabBarItem(title: "Finances", image: UIImage(named: "action-tab"), selectedImage: UIImage(named: "action-tab-selected"))
+            vc3.tabBarItem.image = vc3.tabBarItem.image?.withRenderingMode(.alwaysOriginal)
+            vc3.tabBarItem.selectedImage = vc3.tabBarItem.image?.withRenderingMode(.alwaysOriginal)
+            vc3.tabBarItem.tag = 2
+            vc3.title = ""
+            
+            let vc4 = UINavigationController(rootViewController: self.Vc4!)
+            vc4.tabBarItem = UITabBarItem(title: "Finances", image: UIImage(named: "finance-tab"), selectedImage: UIImage(named: "finance-tab"))
+            vc4.tabBarItem.tag = 3
+            vc4.title = ""
+            
+            
+            let vc5 = UINavigationController(rootViewController: self.Vc5!)
+            vc5.tabBarItem = UITabBarItem(title: "More", image: UIImage(named: "client-tab"), selectedImage: UIImage(named: "client-tab"))
+            vc5.tabBarItem.tag = 4
+            //    vc5.tabBarItem.titlePositionAdjustment = UIOffset(horizontal: 0, vertical: -5.0)
+            vc5.title = ""
+            
+            
+            
+            
+            self.tabBar.isTranslucent = false
+            self.tabBar.tintColor = .systemYellow
+            
+            let controllers = [vc1, vc2, vc3, vc4, vc5]
+            self.viewControllers = controllers
+            
+        }
+        
+    
+    func addActionDrawer (){
+           
+           if self.actionDrawer == nil{
+               
+               
+               let vc = ActionDrawerController()
+               vc.view.frame = CGRect(x: 0, y:0, width: view.frame.width, height: view.frame.height)
+               vc.view.backgroundColor = .clear
+               actionDrawer = vc
+               addChild(self.actionDrawer!)
+               view.insertSubview(self.actionDrawer!.view, at: 1)
+               
+               actionDrawer?.didMove(toParent: self)
+               
+               self.actionDrawer?.view.frame.origin.y = 0 + view.frame.height
+               
+               
+           }
+           
+           
+       }
+    
+    
+    @objc func handleMenuTap () {
+          
+          self.customDelegate?.handleMenuOpen()
+          
+      }
     
     @objc func middleButtonPress (){
-        
-        
+                
         scaleButtonAnimation()
         addActionDrawer()
         
@@ -150,114 +244,14 @@ class baseController: UITabBarController, UITabBarControllerDelegate{
     let vc = TabbedVc5()
     let nc = UINavigationController(rootViewController: vc)
     vc.title = "Profile"
-               present(nc, animated: true, completion: nil)
-               
+    present(nc, animated: true, completion: nil)
+    
            }
     
-    lazy var setUpTabs = {
-        
-        self.Vc1 = HomeViewController()
-        self.Vc2 = TabbedVc2()
-        self.Vc3 = TabbedVc3()
-        self.Vc4 = TabbedVc4()
-        self.Vc5 = TabbedVc5()
-        
-        
-        
-        
-    
-        self.Vc2?.navigationItem.title = "Calendar"
-        self.Vc3?.navigationItem.title = "View Controller 3"
-        self.Vc4?.navigationItem.title = "Numbers"
-        self.Vc5?.navigationItem.title = "More"
-        
-        
-        
-        let settingsBarItem = UIBarButtonItem.init(image: UIImage(named: "settings-tab"), style: .done, target: self, action: #selector(self.handleProfileTap))
-        
-        self.Vc1?.navigationItem.rightBarButtonItem = settingsBarItem
-            
-//            UIBarButtonItem(barButtonSystemItem: .play, target: self, action: #selector(self.handleProfileTap))
-        
-        self.Vc2?.navigationItem.leftBarButtonItem = settingsBarItem
-        
-        self.Vc4?.navigationItem.leftBarButtonItem = settingsBarItem
-        
-       
-        
-        
-        let vc1 = UINavigationController(rootViewController: self.Vc1!)
-        vc1.tabBarItem = UITabBarItem(title: "Notifications", image: UIImage(named: "home-tab"), selectedImage: UIImage(named: "home-tab"))
-        
-        vc1.navigationBar.isTranslucent = false
-        vc1.navigationBar.barTintColor = UIColor(hexString: "F7FBFF")
-        vc1.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-        vc1.navigationBar.shadowImage = UIImage()
-//        vc1.navigationBar.layoutIfNeeded()
-        
-        vc1.tabBarItem.badgeValue = "12"
-        vc1.title = ""
-        vc1.tabBarItem.tag = 0
-        
-        
-        let vc2 = UINavigationController(rootViewController: self.Vc2!)
-        vc2.tabBarItem = UITabBarItem(title: "Calendar", image: UIImage(named: "calendar-tab"), selectedImage: UIImage(named: "calendar-tab"))
-        vc2.tabBarItem.tag = 1
-        vc2.title = ""
-        
-        let vc3 = UINavigationController(rootViewController: self.Vc3!)
-        vc3.tabBarItem = UITabBarItem(title: "Finances", image: UIImage(named: "action-tab"), selectedImage: UIImage(named: "action-tab-selected"))
-        vc3.tabBarItem.image = vc3.tabBarItem.image?.withRenderingMode(.alwaysOriginal)
-        vc3.tabBarItem.selectedImage = vc3.tabBarItem.image?.withRenderingMode(.alwaysOriginal)
-        vc3.tabBarItem.tag = 2
-        vc3.title = ""
-        
-        let vc4 = UINavigationController(rootViewController: self.Vc4!)
-        vc4.tabBarItem = UITabBarItem(title: "Finances", image: UIImage(named: "finance-tab"), selectedImage: UIImage(named: "finance-tab"))
-        vc4.tabBarItem.tag = 3
-        vc4.title = ""
-        
-        
-        let vc5 = UINavigationController(rootViewController: self.Vc5!)
-        vc5.tabBarItem = UITabBarItem(title: "More", image: UIImage(named: "client-tab"), selectedImage: UIImage(named: "client-tab"))
-        vc5.tabBarItem.tag = 4
-        //    vc5.tabBarItem.titlePositionAdjustment = UIOffset(horizontal: 0, vertical: -5.0)
-        vc5.title = ""
-        
-        
-        
-        
-        self.tabBar.isTranslucent = false
-        self.tabBar.tintColor = .systemYellow
-        
-        let controllers = [vc1, vc2, vc3, vc4, vc5]
-        self.viewControllers = controllers
-        
-    }
     
     
     
-    func addActionDrawer (){
-        
-        if self.actionDrawer == nil{
-            
-            
-            let vc = ActionDrawerController()
-            vc.view.frame = CGRect(x: 0, y:0, width: view.frame.width, height: view.frame.height)
-            vc.view.backgroundColor = .clear
-            actionDrawer = vc
-            addChild(self.actionDrawer!)
-            view.insertSubview(self.actionDrawer!.view, at: 1)
-            
-            actionDrawer?.didMove(toParent: self)
-            
-            self.actionDrawer?.view.frame.origin.y = 0 + view.frame.height
-            
-            
-        }
-        
-        
-    }
+   
     
     @objc func animateActionDrawer (){
         
@@ -287,13 +281,8 @@ class baseController: UITabBarController, UITabBarControllerDelegate{
     }
     
     func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
-        
-        
-        
-        
-        
-        
-        
+                
+                                        
         switch viewController.tabBarItem.tag {
         case 0:
             
@@ -350,11 +339,7 @@ class baseController: UITabBarController, UITabBarControllerDelegate{
     }
     
     
-    @ objc func handleMenuTap () {        
-        
-        self.customDelegate?.handleMenuOpen()
-        
-    }
+  
     
     
     

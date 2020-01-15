@@ -17,3 +17,12 @@ protocol HomeControllerDelegate {
 protocol cellButtonDelegate {
     func presentVc(navTitle:String)
 }
+
+protocol onlineBookingExampleDelegate {
+    func presentSafari()
+}
+
+//AnnouncementCell
+protocol openAnnouncementDelegate {
+    func openAnnouncement (heading: String, body: String, image: Any)
+}
