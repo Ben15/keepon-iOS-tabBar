@@ -8,15 +8,15 @@
 
 import UIKit
 
-class TabbedVc5: UIViewController {
+class profileSettings: UIViewController {
     
     //    MARK: properties
     //    MARK: inits
     //    MARK: methods
     
     var identifier = "cellId"
-    var buttonLabels = [["Online Bookings", "SMS settings", "Calendar integration","Products & Services", "Invoices"], ["Bank details"], ["My Account"]]
-    var sections = ["", "Get paid", "Account"]
+    var buttonLabels = [["Your details"],["Online Bookings", "SMS settings", "Calendar integration","Products & Services", "Invoices"], ["Bank details"], ["My Account"]]
+    var sections = ["","", "Get paid", "Account"]
     
     
     var tableView : UITableView!
@@ -82,30 +82,25 @@ class TabbedVc5: UIViewController {
         
             tableView.delegate = self
             tableView.dataSource = self
-        tableView.rowHeight = UITableView.automaticDimension
-        tableView.estimatedRowHeight = 44
-        self.tableView.sectionHeaderHeight = UITableView.automaticDimension;
-        self.tableView.estimatedSectionHeaderHeight = 25;
+            tableView.rowHeight = UITableView.automaticDimension
+            tableView.estimatedRowHeight = 44
+            self.tableView.sectionHeaderHeight = UITableView.automaticDimension;
+            self.tableView.estimatedSectionHeaderHeight = 25;
             tableView.register(UITableViewCell.self, forCellReuseIdentifier: identifier)
+        tableView.register(ProfileHeaderCell.self, forCellReuseIdentifier: "profileCell")
             
         }
         
     }
 
-    extension TabbedVc5: UITableViewDataSource, UITableViewDelegate {
+    extension profileSettings: UITableViewDataSource, UITableViewDelegate {
         
         
   
         func numberOfSections(in tableView: UITableView) -> Int {
             return sections.count
         }
-        
-//        func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-//
-//            let title = self.sections[section]
-//
-//            return title
-//        }
+
         
         
         func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -140,6 +135,15 @@ class TabbedVc5: UIViewController {
         }
         
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+            
+            if indexPath.section == 0{
+                
+            let cell = tableView.dequeueReusableCell(withIdentifier: "profileCell", for: indexPath) as! ProfileHeaderCell
+                cell.accessoryType = UITableViewCell.AccessoryType.disclosureIndicator
+                return cell 
+            }
+            
+            
             let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath)
             
             
@@ -163,7 +167,7 @@ class TabbedVc5: UIViewController {
         }
         
         func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
-            if section == 1 {
+            if section == 2 {
                 
                 return "Get verified and add the bank account you wish funds to be transferred into"
                 

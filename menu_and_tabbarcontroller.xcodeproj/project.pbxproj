@@ -14,6 +14,8 @@
 		D88F1D3E23CED3970095E944 /* AnnouncementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88F1D3D23CED3970095E944 /* AnnouncementCell.swift */; };
 		D88F1D4023CEEAD30095E944 /* AnnouncementCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88F1D3F23CEEAD30095E944 /* AnnouncementCollectionViewCell.swift */; };
 		D88F1D4223CF52E50095E944 /* announcementItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88F1D4123CF52E50095E944 /* announcementItem.swift */; };
+		D88F1D4423D09CA40095E944 /* AnnouncementController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88F1D4323D09CA40095E944 /* AnnouncementController.swift */; };
+		D88F1D4723D0C11A0095E944 /* ProfileHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88F1D4623D0C11A0095E944 /* ProfileHeaderCell.swift */; };
 		D89C0DC023BB0A2D00CF32F9 /* ActionDrawerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89C0DBF23BB0A2D00CF32F9 /* ActionDrawerController.swift */; };
 		D89C0DC323BB116200CF32F9 /* actionBarCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89C0DC223BB116200CF32F9 /* actionBarCellCollectionViewCell.swift */; };
 		D89C0DC723BB130600CF32F9 /* actionDrawerItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89C0DC623BB130600CF32F9 /* actionDrawerItem.swift */; };
@@ -40,7 +42,7 @@
 		D8DD100523BA229D0078684A /* TabbedVc2.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DD100423BA229D0078684A /* TabbedVc2.swift */; };
 		D8DD100823BA22BC0078684A /* TabbedVc3.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DD100723BA22BC0078684A /* TabbedVc3.swift */; };
 		D8DD100A23BA22D00078684A /* TabbedVc4.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DD100923BA22D00078684A /* TabbedVc4.swift */; };
-		D8DD100C23BA22E00078684A /* TabbedVc5.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DD100B23BA22E00078684A /* TabbedVc5.swift */; };
+		D8DD100C23BA22E00078684A /* profileSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DD100B23BA22E00078684A /* profileSettings.swift */; };
 		D8DD100E23BA288B0078684A /* protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DD100D23BA288B0078684A /* protocols.swift */; };
 		D8DD101023BA29C20078684A /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DD100F23BA29C20078684A /* MenuController.swift */; };
 		D8DD101223BA2ECF0078684A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8DD101123BA2ECE0078684A /* Main.storyboard */; };
@@ -54,6 +56,8 @@
 		D88F1D3D23CED3970095E944 /* AnnouncementCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementCell.swift; sourceTree = "<group>"; };
 		D88F1D3F23CEEAD30095E944 /* AnnouncementCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementCollectionViewCell.swift; sourceTree = "<group>"; };
 		D88F1D4123CF52E50095E944 /* announcementItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = announcementItem.swift; sourceTree = "<group>"; };
+		D88F1D4323D09CA40095E944 /* AnnouncementController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementController.swift; sourceTree = "<group>"; };
+		D88F1D4623D0C11A0095E944 /* ProfileHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderCell.swift; sourceTree = "<group>"; };
 		D89C0DBF23BB0A2D00CF32F9 /* ActionDrawerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionDrawerController.swift; sourceTree = "<group>"; };
 		D89C0DC223BB116200CF32F9 /* actionBarCellCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = actionBarCellCollectionViewCell.swift; sourceTree = "<group>"; };
 		D89C0DC623BB130600CF32F9 /* actionDrawerItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = actionDrawerItem.swift; sourceTree = "<group>"; };
@@ -82,7 +86,7 @@
 		D8DD100423BA229D0078684A /* TabbedVc2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbedVc2.swift; sourceTree = "<group>"; };
 		D8DD100723BA22BC0078684A /* TabbedVc3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbedVc3.swift; sourceTree = "<group>"; };
 		D8DD100923BA22D00078684A /* TabbedVc4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbedVc4.swift; sourceTree = "<group>"; };
-		D8DD100B23BA22E00078684A /* TabbedVc5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbedVc5.swift; sourceTree = "<group>"; };
+		D8DD100B23BA22E00078684A /* profileSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileSettings.swift; sourceTree = "<group>"; };
 		D8DD100D23BA288B0078684A /* protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = protocols.swift; sourceTree = "<group>"; };
 		D8DD100F23BA29C20078684A /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
 		D8DD101123BA2ECE0078684A /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -110,6 +114,15 @@
 			path = chargeNowController;
 			sourceTree = "<group>";
 		};
+		D88F1D4523D0A0CB0095E944 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				D8B2A20223CDEB3F00595BB2 /* HomeViewController.swift */,
+				D88F1D4323D09CA40095E944 /* AnnouncementController.swift */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
 		D89C0DBE23BB0A0400CF32F9 /* views */ = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				D89C0DC223BB116200CF32F9 /* actionBarCellCollectionViewCell.swift */,
+				D88F1D4623D0C11A0095E944 /* ProfileHeaderCell.swift */,
 			);
 			path = cells;
 			sourceTree = "<group>";
@@ -141,33 +155,16 @@
 		D8B2A1FF23CDEAEF00595BB2 /* HomeViewController */ = {
 			isa = PBXGroup;
 			children = (
+				D88F1D4523D0A0CB0095E944 /* views */,
 				D8B2A20E23CDEBE400595BB2 /* cells */,
-				D8B2A20723CDEBD800595BB2 /* models */,
-				D8B2A20423CDEBD200595BB2 /* protocols */,
-				D8B2A20223CDEB3F00595BB2 /* HomeViewController.swift */,
 			);
 			path = HomeViewController;
-			sourceTree = "<group>";
-		};
-		D8B2A20423CDEBD200595BB2 /* protocols */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = protocols;
-			sourceTree = "<group>";
-		};
-		D8B2A20723CDEBD800595BB2 /* models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = models;
 			sourceTree = "<group>";
 		};
 		D8B2A20E23CDEBE400595BB2 /* cells */ = {
 			isa = PBXGroup;
 			children = (
 				D8B2A20F23CDEBE400595BB2 /* NextAppointmentEmptyCell.swift */,
-				D88F1D3D23CED3970095E944 /* AnnouncementCell.swift */,
 				D8B2A21023CDEBE400595BB2 /* TodaysPaymentsCell.swift */,
 				D8B2A21123CDEBE400595BB2 /* SubscriptionsAndPacksCell.swift */,
 				D8B2A21223CDEBE400595BB2 /* DateCell.swift */,
@@ -175,6 +172,7 @@
 				D8B2A21423CDEBE400595BB2 /* BankTransferEmptyCell.swift */,
 				D8B2A21523CDEBE400595BB2 /* BankTransferSectionCell.swift */,
 				D8B2A21623CDEBE400595BB2 /* TodaysOnlineBookingAvailabilityEmptyCell.swift */,
+				D88F1D3D23CED3970095E944 /* AnnouncementCell.swift */,
 				D88F1D3F23CEEAD30095E944 /* AnnouncementCollectionViewCell.swift */,
 			);
 			path = cells;
@@ -227,7 +225,7 @@
 				D8DD100423BA229D0078684A /* TabbedVc2.swift */,
 				D8DD100723BA22BC0078684A /* TabbedVc3.swift */,
 				D8DD100923BA22D00078684A /* TabbedVc4.swift */,
-				D8DD100B23BA22E00078684A /* TabbedVc5.swift */,
+				D8DD100B23BA22E00078684A /* profileSettings.swift */,
 			);
 			path = "TabbedVc's";
 			sourceTree = "<group>";
@@ -308,6 +306,7 @@
 				D89C0DC323BB116200CF32F9 /* actionBarCellCollectionViewCell.swift in Sources */,
 				D89C0DCD23BE24AD00CF32F9 /* ChargeNowControllerViewController.swift in Sources */,
 				D8B2A20A23CDEBD800595BB2 /* homeCellModel.swift in Sources */,
+				D88F1D4423D09CA40095E944 /* AnnouncementController.swift in Sources */,
 				D8B2A21C23CDEBE400595BB2 /* BankTransferEmptyCell.swift in Sources */,
 				D89C0DC723BB130600CF32F9 /* actionDrawerItem.swift in Sources */,
 				D8B2A21923CDEBE400595BB2 /* SubscriptionsAndPacksCell.swift in Sources */,
@@ -321,6 +320,7 @@
 				D8B2A20323CDEB3F00595BB2 /* HomeViewController.swift in Sources */,
 				D8DD100E23BA288B0078684A /* protocols.swift in Sources */,
 				D8DD100523BA229D0078684A /* TabbedVc2.swift in Sources */,
+				D88F1D4723D0C11A0095E944 /* ProfileHeaderCell.swift in Sources */,
 				D88F1D4023CEEAD30095E944 /* AnnouncementCollectionViewCell.swift in Sources */,
 				D8B2A21B23CDEBE400595BB2 /* TrialCell.swift in Sources */,
 				D8DD101023BA29C20078684A /* MenuController.swift in Sources */,
@@ -333,7 +333,7 @@
 				D885842D23C0E19B009266DE /* cellModel.swift in Sources */,
 				D8DD0FED23BA1D450078684A /* AppDelegate.swift in Sources */,
 				D88F1D4223CF52E50095E944 /* announcementItem.swift in Sources */,
-				D8DD100C23BA22E00078684A /* TabbedVc5.swift in Sources */,
+				D8DD100C23BA22E00078684A /* profileSettings.swift in Sources */,
 				D8DD100123BA1F290078684A /* baseController.swift in Sources */,
 				D89C0DC023BB0A2D00CF32F9 /* ActionDrawerController.swift in Sources */,
 				D8DD0FEF23BA1D450078684A /* SceneDelegate.swift in Sources */,

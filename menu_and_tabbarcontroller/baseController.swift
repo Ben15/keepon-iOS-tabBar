@@ -125,7 +125,9 @@ class baseController: UITabBarController, UITabBarControllerDelegate{
             self.Vc4?.navigationItem.title = "Numbers"
             self.Vc5?.navigationItem.title = "Clients"
                             
-            let settingsBarItem = UIBarButtonItem.init(image: UIImage(named: "settings-tab"), style: .done, target: self, action: #selector(self.handleProfileTap))
+        
+        let settingsBarItem = UIBarButtonItem.init(image: UIImage(named: "profile-tab")?.withRenderingMode(.alwaysOriginal), style: .done, target: self, action: #selector(self.handleProfileTap))
+        
             
             self.Vc1?.navigationItem.rightBarButtonItem = settingsBarItem
                 
@@ -140,8 +142,7 @@ class baseController: UITabBarController, UITabBarControllerDelegate{
             
             
             let vc1 = UINavigationController(rootViewController: self.Vc1!)
-            vc1.tabBarItem = UITabBarItem(title: "Notifications", image: UIImage(named: "home-tab"), selectedImage: UIImage(named: "home-tab"))
-            
+            vc1.tabBarItem = UITabBarItem(title: "Notifications", image: UIImage(named: "home-tab"), selectedImage: UIImage(named: "home-tab"))            
             vc1.navigationBar.isTranslucent = false
             vc1.navigationBar.barTintColor = UIColor(hexString: "F7FBFF")
             vc1.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
@@ -172,7 +173,7 @@ class baseController: UITabBarController, UITabBarControllerDelegate{
             
             
             let vc5 = UINavigationController(rootViewController: self.Vc5!)
-            vc5.tabBarItem = UITabBarItem(title: "More", image: UIImage(named: "client-tab"), selectedImage: UIImage(named: "client-tab"))
+            vc5.tabBarItem = UITabBarItem(title: "Clients", image: UIImage(named: "client-tab"), selectedImage: UIImage(named: "client-tab"))
             vc5.tabBarItem.tag = 4
             //    vc5.tabBarItem.titlePositionAdjustment = UIOffset(horizontal: 0, vertical: -5.0)
             vc5.title = ""
@@ -241,9 +242,9 @@ class baseController: UITabBarController, UITabBarControllerDelegate{
     
    
    @objc func handleProfileTap (){
-    let vc = TabbedVc5()
+    let vc = profileSettings()
     let nc = UINavigationController(rootViewController: vc)
-    vc.title = "Profile"
+    vc.title = "Business settings"
     present(nc, animated: true, completion: nil)
     
            }

@@ -24,5 +24,5 @@ protocol onlineBookingExampleDelegate {
 
 //AnnouncementCell
 protocol openAnnouncementDelegate {
-    func openAnnouncement (heading: String, body: String, image: Any)
+    func openAnnouncement (data: announcementModel)
 }

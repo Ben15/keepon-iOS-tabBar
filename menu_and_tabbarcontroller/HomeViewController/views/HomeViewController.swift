@@ -17,9 +17,9 @@ class HomeViewController: UIViewController {
     var cellsTwo = [
         
         homeCellModel(cell: DateCell(), cellIdentifier: "dateCell", type: .dateCell, cellClass: DateCell.self),
-         homeCellModel(cell: TrialCell(), cellIdentifier: "trialCell", type: .trialCell, cellClass: TrialCell.self),
-           homeCellModel(cell: AnnouncementCell(), cellIdentifier: "announcementCell", type: .announcement, cellClass: AnnouncementCell.self),
        
+           homeCellModel(cell: AnnouncementCell(), cellIdentifier: "announcementCell", type: .announcement, cellClass: AnnouncementCell.self),
+         homeCellModel(cell: TrialCell(), cellIdentifier: "trialCell", type: .trialCell, cellClass: TrialCell.self),
         homeCellModel(cell: TodaysPaymentsCell(), cellIdentifier: "todaysPayments", type:.todaysPayments, cellClass: TodaysPaymentsCell.self),
 //        homecellModel(cell: BankTransferSectionCell(), cellIdentifier: "bankTransfer", type: .bankTransfer, cellClass: BankTransferSectionCell.self),
         homeCellModel(cell: BankTransferEmptyCell(), cellIdentifier: "bankTransferEmpty", type: .bankTransferEmpty, cellClass: BankTransferEmptyCell.self),
@@ -191,21 +191,13 @@ extension HomeViewController: onlineBookingExampleDelegate {
 
 
 extension HomeViewController: openAnnouncementDelegate {
-    func openAnnouncement(heading: String, body: String, image: Any) {
+    func openAnnouncement(data: announcementModel) {
         
-             let vc = UIViewController()
+             let vc = AnnouncementController()
         
              let nc = UINavigationController(rootViewController: vc)
-            vc.title = heading
-            vc.view.backgroundColor = .white
-        vc.navigationController?.navigationBar.isHidden = true
-            
-            let imageView = UIImageView()
-            imageView.contentMode = .scaleAspectFill
-            imageView.image = image as! UIImage
-            imageView.frame = CGRect(x: 0, y: 0, width: vc.view.frame.width, height: 260)
-            vc.view.addSubview(imageView)
-        
+                
+                vc.data = data
         
              present(nc, animated: true, completion: nil)
     }

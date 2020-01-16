@@ -57,7 +57,9 @@ class AnnouncementCollectionViewCell: UICollectionViewCell {
     
     @objc func openAnnouncement () {
         
-        self.openAnnouncementDelegate?.openAnnouncement(heading: self.data!.title!, body: self.data!.body!, image: self.data!.image)
+        guard let unwrappedData = self.data else {return}
+        
+        self.openAnnouncementDelegate?.openAnnouncement(data: unwrappedData)
         
     }
     

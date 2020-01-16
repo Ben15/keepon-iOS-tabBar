@@ -16,11 +16,10 @@ class TrialCell: UITableViewCell {
         
         lazy var setUpBg = {
                     
-            self.bg.backgroundColor = UIColor(hexString: "E4F1FF")
+            self.bg.backgroundColor = .systemBlue
             self.bg.translatesAutoresizingMaskIntoConstraints = false
             self.bg.layer.cornerRadius = 4
-            self.bg.layer.borderWidth = 1
-            self.bg.layer.borderColor = UIColor(hexString: "1C83F6")?.cgColor
+            
             
             self.contentView.addSubview(self.bg)
             
@@ -44,7 +43,7 @@ class TrialCell: UITableViewCell {
 
             self.trialLength.text = "You have 10 days left on your trial"
             self.trialLength.font = UIFont.systemFont(ofSize: 14, weight: .medium)
-            self.trialLength.textColor = UIColor(hexString: "1C83F6")
+            self.trialLength.textColor = .white
             self.trialLength.translatesAutoresizingMaskIntoConstraints = false
 
             self.bg.addSubview(self.trialLength)
