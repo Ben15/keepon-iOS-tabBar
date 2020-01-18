@@ -21,12 +21,12 @@ class chargeNowController: UIViewController {
     
     
     var newFormCells = [
-        [cellModel(label: "Pay as you go"), cellModel(label:"amount")],
-        [cellModel(label: "Discount")],
-        [cellModel(label:"Add domestic fee"),cellModel(label:"Add Int fee")],
-        [cellModel(label:"Payment method")],
-        [cellModel(customCell: PaymentButtonsTableviewCell())],
-        [cellModel(label:"Mark as card payment")]
+        [chargeNowModel(label: "Pay as you go"), chargeNowModel(label:"amount")],
+        [chargeNowModel(label: "Discount")],
+        [chargeNowModel(label:"Add domestic fee"),chargeNowModel(label:"Add Int fee")],
+        [chargeNowModel(label:"Payment method")],
+        [chargeNowModel(customCell: PaymentButtonsTableviewCell())],
+        [chargeNowModel(label:"Mark as card payment")]
     ]
     
     var formCells = [

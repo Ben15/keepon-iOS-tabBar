@@ -10,7 +10,7 @@ import Foundation
 
 import UIKit
 
-struct cellModel {
+struct chargeNowModel {
     
     var label : String?
     var input : UITextField?

@@ -246,8 +246,7 @@ class baseController: UITabBarController, UITabBarControllerDelegate{
     let nc = UINavigationController(rootViewController: vc)
     vc.title = "Business settings"
     present(nc, animated: true, completion: nil)
-    
-           }
+    }
     
     
     
